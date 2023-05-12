@@ -143,6 +143,7 @@ exit(1);
 //input cluster ; getting line from stdin
 char* line = input();
 int cur_char = 0;
+while(feof(stdin) == 0) {
 while(cur_char <(int)strlen(line) - 1) {
 	//prints any leading whitespace.
 	while(!isalpha(line[cur_char])) {
@@ -186,7 +187,7 @@ if(!isalpha(line[strlen(line)-1])) {
 }
 printf("\n");
 
-
+}
 
 
 free(line);
